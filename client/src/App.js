@@ -1,19 +1,10 @@
 import { Route, BrowserRouter as Router } from 'react-router-dom';
 import React, { Component } from 'react';
-import { Navbar } from './components/Navbar/Navbar';
+import { Navbar } from './components/Navbar';
 import { Homepage } from './pages/Homepage';
-// import './App.css';
-
-// class App extends Component {
-//   render() {
-//     return (
-//       <div classname = "head"> Hello  World</div>
-//     );
-//   }
-// }
-
-// export default App;
-
+import { Kitchen } from './pages/Kitchen';
+import { Interior } from './pages/Interior';
+import { Exterior } from './pages/Exterior';
 
 class App extends Component {
   render() {
@@ -25,6 +16,10 @@ class App extends Component {
           <Navbar />
            
           <Route exact path="/" component={Homepage}/>
+          <Route exact path="/kitchen" component={Kitchen}/>
+          <Route exact path="/interior" component={Interior}/>
+          <Route exact path="/exterior" component={Exterior}/>
+          
 
 
         </div>
