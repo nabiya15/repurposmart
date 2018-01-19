@@ -1,8 +1,13 @@
 import React from 'react';
+import { Navbar } from '../components/Navbar';
 
-
-export const Homepage = () => {
-	return (
-		<div>This is the Homepage component</div>
-	);
-};
+export class Homepage extends React.Component {
+	render() {
+		return (
+			<div className="jumbotron">
+				<h1 style={{textAlign:"center"}}>RepurpoSMART homepage</h1>
+				<Navbar />
+			</div>
+		)
+	}
+}

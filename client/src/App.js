@@ -1,6 +1,5 @@
 import { Route, BrowserRouter as Router } from 'react-router-dom';
 import React, { Component } from 'react';
-import { Navbar } from './components/Navbar';
 import { Homepage } from './pages/Homepage';
 import { Kitchen } from './pages/Kitchen';
 import { Interior } from './pages/Interior';
@@ -11,9 +10,7 @@ class App extends Component {
     return (
       <Router>
         <div>
-
-
-          <Navbar />
+          
            
           <Route exact path="/" component={Homepage}/>
           <Route exact path="/kitchen" component={Kitchen}/>

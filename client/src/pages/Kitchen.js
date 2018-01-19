@@ -1,7 +1,14 @@
 import React from 'react';
+import { Navbar } from '../components/Navbar';
 
-export const Kitchen = () => {
-	return (
-		<div>This is the Kitchen and Bathroom component</div>
-	);
-};
+export class Kitchen extends React.Component {
+	// Include a render method 
+	render() {
+		return (
+			<div className="jumbotron">
+				<h1 style={{textAlign:"center"}}>Kitchen & Bathroom</h1>
+				<Navbar />
+			</div>
+		)
+	}
+}
