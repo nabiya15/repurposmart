@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "title": "Sink",
+    "image": "https://www.homedepot.com/hdus/en_US/DTCCOMNEW/fetch/Category_Pages/Kitchen/Sinks/bar-prep-sink-400x400-2.png",
+    "price": "$120",
+    "seller": "username",
+    "category": "",
+    "description": ""
+  },
+  {
+    "id": 2,
+    "title": "Cabinet",
+    "image": "https://i.pinimg.com/736x/1d/96/55/1d96552e9c2a306f2402a8a99dac5cbb--kitchen-reno-cabinet-colors-kitchen.jpg",
+    "price": "$300",
+    "seller": "username",
+    "category": "",
+    "description": ""
+  }
+]

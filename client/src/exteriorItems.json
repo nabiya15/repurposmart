@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "title": "Firepit",
+    "image": "https://secure.img1-ag.wfcdn.com/im/08371255/resize-h800%5Ecompr-r85/3133/31336293/Random+Stone+Concrete+Wood+Burning+Fire+Pit.jpg",
+    "price": "$127",
+    "seller": "username",
+    "category": "",
+    "description": ""
+  },
+  {
+    "id": 2,
+    "title": "Mixed grade A polished pebbles",
+    "image": "https://images.homedepot-static.com/productImages/05a5ee72-63e7-4174-9078-d63707c1e657/svn/rain-forest-bagged-rfgmbp3-30-64_1000.jpg",
+    "price": "$30",
+    "seller": "username",
+    "category": "",
+    "description": ""
+  }
+]
