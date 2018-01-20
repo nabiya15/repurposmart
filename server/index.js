@@ -9,7 +9,7 @@ const passport = require('passport');
 require('./models/Users');
 
 //require Google Oauth configuration
-require('./authconfig/googleOauth');
+require('./authConfig/googleOauth');
 
 //enabling our cookie-session
 app.use(
