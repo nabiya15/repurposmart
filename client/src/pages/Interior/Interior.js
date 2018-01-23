@@ -1,8 +1,12 @@
 import React from 'react';
-import Navbar from '../../components/Navbar';
-import ItemCard from "../../components/ItemCard";
-import items from "../../interiorItems.json";
-import "./Interior.css";
+//import Navbar from '../../components/Navbar';
+import ItemCard from '../../components/ItemCard';
+import items from '../../interiorItems.json';
+import './Interior.css';
+import { Link } from 'react-router-dom';
+import Exterior from '../Exterior/Exterior.js';
+import Kitchen from '../Kitchen/Kitchen';
+import Homepage from '../Homepage/Homepage.js';
 
 class Interior extends React.Component {
 	// Setting this.state.items to the interiorItems json array
@@ -14,8 +18,25 @@ class Interior extends React.Component {
 		return (
 			<div>
 				<div className="jumbotron">
-					<h1 style={{textAlign:"center"}}>Interior Building Supplies</h1>
-					<Navbar />
+					<h1 style={{ textAlign: 'center' }}>
+						Interior Building Supplies
+					</h1>
+					<ul>
+												<li>
+							<Link to="/homepage">
+								RepurpoSMART homepage
+							</Link>
+						</li>
+						<li>
+							<Link to="/kitchen">Kitchen and Bathroom</Link>
+						</li>
+
+						<li>
+							<Link to="/exterior">
+								Exterior Building Supplies
+							</Link>
+						</li>
+					</ul>
 				</div>
 
 				{/* Map over this.state.items and render an ItemCard component for each item object */}
@@ -30,7 +51,7 @@ class Interior extends React.Component {
 					/>
 				))}
 			</div>
-		)
+		);
 	}
 }
 

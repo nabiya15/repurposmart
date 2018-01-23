@@ -29,22 +29,20 @@ passport.use(
 			clientSecret: keys.googleKeys.googleClientSecret,
 			callbackURL: '/auth/google/callback'
 		},
-		(accessToken, refreshToken, profile, done) => {
+		async (accessToken, refreshToken, profile, done) => {
 			//check if we already have the user in our database, save it to the database only if user does not exist in our db.
-			User.findOne({
-				userId: profile.id
-			}).then((existingUser) => {
-				if (existingUser) {
-					//this means we already have a record in our database with that id. hence do not save the user.
-					done(null, existingUser);
-				} else {
-					// there is no record with that id, therefore save it to the database
-					// create new instance of User
-					new User({ userId: profile.id })
-						.save()
-						.then(newUser => done(null, newUser)); // userId is the record of our database and profile.d comes from the profile returned by google authentication. save() saves that user to our database.
-				}
-			});
+			const existingUser = await User.findOne({userId: profile.id});
+			
+			if (existingUser) {
+				//this means we already have a record in our database with that id. hence do not save the user.
+				done(null, existingUser);
+			} 
+	
+			// there is no record with that id, therefore save it to the database
+			// create new instance of User
+			const newUser = await new User({ userId: profile.id }).save();
+			done(null, newUser); // userId is the record of our database and profile.d comes from the profile returned by google authentication. save() saves that user to our database.
+
 		}
 	)
 );
