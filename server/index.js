@@ -14,7 +14,7 @@ require('./authConfig/googleOauth');
 //enabling our cookie-session
 app.use(
 	cookieSession({
-		maxAge: 30 * 24 * 60 * 60 * 1000, //defines the max time untill our cookie expires in millisecs
+		//maxAge: 30 * 24 * 60 * 60 * 1000, //defines the max time untill our cookie expires in millisecs
 		keys: [keys.cookieKey.key]
 	})
 );

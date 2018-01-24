@@ -27,7 +27,8 @@ passport.use(
 		{
 			clientID: keys.googleKeys.googleClientID,
 			clientSecret: keys.googleKeys.googleClientSecret,
-			callbackURL: '/auth/google/callback'
+			callbackURL: '/auth/google/callback',
+			proxy:true
 		},
 		async (accessToken, refreshToken, profile, done) => {
 			//check if we already have the user in our database, save it to the database only if user does not exist in our db.
