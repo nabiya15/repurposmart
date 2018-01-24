@@ -4,9 +4,6 @@ import ItemCard from '../../components/ItemCard';
 import items from '../../interiorItems.json';
 import './Interior.css';
 import { Link } from 'react-router-dom';
-import Exterior from '../Exterior/Exterior.js';
-import Kitchen from '../Kitchen/Kitchen';
-import Homepage from '../Homepage/Homepage.js';
 
 class Interior extends React.Component {
 	// Setting this.state.items to the interiorItems json array
@@ -23,8 +20,8 @@ class Interior extends React.Component {
 					</h1>
 					<ul>
 												<li>
-							<Link to="/homepage">
-								RepurpoSMART homepage
+							<Link to="/">
+								 Homepage
 							</Link>
 						</li>
 						<li>
