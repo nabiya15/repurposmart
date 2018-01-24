@@ -3,10 +3,6 @@ import React from 'react';
 import ItemCard from '../../components/ItemCard';
 import items from '../../exteriorItems.json';
 import { Link } from 'react-router-dom';
-import Homepage from "../Homepage/Homepage";
-import Kitchen from "../Kitchen/Kitchen";
-import Interior from "../Interior/Interior";
-
 import './Exterior.css';
 
 class Exterior extends React.Component {

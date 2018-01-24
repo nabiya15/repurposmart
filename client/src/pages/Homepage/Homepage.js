@@ -2,10 +2,6 @@ import React from 'react';
 //import Navbar from '../../components/Navbar';
 import './Homepage.css';
 import { Link } from 'react-router-dom';
-import Exterior from '../Exterior/Exterior.js';
-import Kitchen from '../Kitchen/Kitchen';
-import Interior from '../Interior/Interior.js';
-
 class Homepage extends React.Component {
 	render() {
 		return (

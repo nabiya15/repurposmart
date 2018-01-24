@@ -4,9 +4,6 @@ import ItemCard from '../../components/ItemCard';
 import items from '../../kitchenItems.json';
 import './Kitchen.css';
 import { Link } from 'react-router-dom';
-import Exterior from '../Exterior/Exterior.js';
-import Homepage from '../Homepage/Homepage';
-import Interior from '../Interior/Interior.js';
 
 class Kitchen extends React.Component {
 	// Setting this.state.items to the kitchenItems json array
@@ -21,7 +18,7 @@ class Kitchen extends React.Component {
 					<h1 style={{ textAlign: 'center' }}>Kitchen & Bathroom</h1>
 					<ul>
 						<li>
-							<Link to="/homepage">RepurpoSMART homepage</Link>
+							<Link to="/">Homepage</Link>
 						</li>
 						<li>
 							<Link to="/interior">Interior Building Supplies</Link>

@@ -1,0 +1,10 @@
+Action creators purpose is to return actions that get sent to all different reducers inside of our application which in turn create new values for state. That state gets updated inside of out redux store. The redux store then sends the newely updated state to all our react components. Bottom of the line, every action creator has to immediately return an action.
+
+Flow diagram:
+
+REACT COMPONENT ===(Calls-an)===> ACTION CREATOR ===(Returns-an)===> ACTION ===(Sent-to)===> REDUCRES ===(Updates-state-in)===> REDUX STORE ===(State-sent-back-to-react-components-causing-them-to-re-render)
+
+
+Redux-thunk:
+	The purpose of redux thunk is to allow us to write action creators that break the requirement that every action creator has to immediately return an action.
+	Thunk is like a large funnel that keeps waiting for actions to be passed to it.
