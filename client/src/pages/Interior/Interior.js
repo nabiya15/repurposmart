@@ -19,10 +19,8 @@ class Interior extends React.Component {
 						Interior Building Supplies
 					</h1>
 					<ul>
-												<li>
-							<Link to="/">
-								 Homepage
-							</Link>
+						<li>
+							<Link to="/">Homepage</Link>
 						</li>
 						<li>
 							<Link to="/kitchen">Kitchen and Bathroom</Link>
