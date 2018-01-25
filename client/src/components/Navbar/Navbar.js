@@ -1,16 +1,45 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import "./Navbar.css";
+import React, { Component } from 'react';
+import './Navbar.css';
+import { connect } from 'react-redux';
+import {Link} from "react-router-dom";
 
-const Navbar = () => {
-	return (
-		<ul>
-			<li><Link to="/">Homepage</Link></li> 
-			<li><Link to="/kitchen">Kitchen and Bathroom</Link></li>
-			<li><Link to="/interior">Interior Building Supplies</Link></li>
-			<li><Link to="/exterior">Exterior Building Supplies</Link></li>
-		</ul>
-	)
+class Navbar extends Component {
+	renderContent() {
+		switch (this.props.auth) {
+			case null:
+				return;
+			case false:
+				return (
+					<li>
+						<a className="waves-effect waves-light btn" href="/auth/google"  >Login</a>
+					</li>
+				);
+			default:
+				return (
+					<li>
+						<a className="waves-effect waves-light btn" href="/api/logout">Logout</a>
+					</li>
+				);
+		}
+	}
+	render() {
+		return (
+			<nav>
+				<div className="nav-wrapper">
+					<Link to={this.props.auth ? "/homepage" : "/" }
+					className = "left brand-logo">
+						Repurposmart
+					</Link>
+					<ul className="right">
+						{this.renderContent()}
+					</ul>
+				</div>
+			</nav>
+		);
+	}
+}
+function mapStateToProps({ auth }) {
+	return { auth };
 }
 
-export default Navbar;
+export default connect(mapStateToProps)(Navbar);

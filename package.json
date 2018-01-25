@@ -1,0 +1,10 @@
+{
+  "name": "repurposmart",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server/index.js",
+    "postinstall": "cd server && npm install"
+  }
+}
