@@ -4,20 +4,26 @@ import Homepage from './pages/Homepage';
 import Kitchen from './pages/Kitchen';
 import Interior from './pages/Interior';
 import Exterior from './pages/Exterior';
-import ItemPage from './pages/ItemPage'
+import ItemPage from './pages/ItemPage';
+import ItemCard from './components/ItemCard';
+
 
 class App extends Component {
+
   render() {
     return (
       <Router>
         <div>
-          
-           
           <Route exact path="/" component={Homepage}/>
           <Route exact path="/kitchen" component={Kitchen}/>
           <Route exact path="/interior" component={Interior}/>
-          <Route exact path="/exterior" component={Exterior}/>
+          <Route exact path="/exterior" component={Exterior}/>  
+
           
+          <Route exact path="/interior/:itemId" component={ItemPage}/>
+          <Route exact path="/exterior/:itemId" component={ItemPage}/>
+          <Route exact path="/kitchen/:itemId" component={ItemPage}/>
+
         </div>
       </Router>
     );
@@ -26,7 +32,8 @@ class App extends Component {
 
 export default App;
 
-// <Route exact path="/kitchen/:id" component={ItemPage}/>
-// <Route exact path="/interior/:id" component={ItemPage}/>
-// <Route exact path="/exterior/:id" component={ItemPage}/>
+
+
+
+
 

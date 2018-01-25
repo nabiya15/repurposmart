@@ -23,6 +23,7 @@ class Exterior extends React.Component {
 					<ItemCard
 						id={item.id}
 						key={item.id}
+						category="exterior"
 						title={item.title}
 						image={item.image}
 						price={item.price}
