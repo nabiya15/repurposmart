@@ -1,25 +1,42 @@
 import React from 'react';
-//import Navbar from '../../components/Navbar';
 import ItemCard from '../../components/ItemCard';
-import items from '../../interiorItems.json';
+import items from '../../items.json';
 import './Interior.css';
 import { Link } from 'react-router-dom';
 
 class Interior extends React.Component {
-	// Setting this.state.items to the interiorItems json array
-	state = {
-		items
+	// Setting inital state 
+	constructor() {
+		// console.log(items)
+	    // super() allows us to use 'this'
+	    super()
+	    // getInitialState:
+	    this.state = {
+	      items: items
+	    }
+	    // Adding our isInteriorItem() method to 'this' 
+	    this.isInteriorItem = this.isInteriorItem.bind(this);
+  	};
+
+  	isInteriorItem(item) {
+		return item.category === 'interior';
+	};
+
+	componentDidMount() {
+		const interiorItems = items.filter(this.isInteriorItem)
+		this.setState( {items: interiorItems} );
 	};
 
 	render() {
+		// {console.log(this.state)}
 		return (
 			<div>
-				<div className="jumbotron">
+				<div>
 					<h1 style={{ textAlign: 'center' }}>
 						Interior Building Supplies
 					</h1>
 					<ul>
-												<li>
+						<li>
 							<Link to="/">
 								 Homepage
 							</Link>
@@ -41,7 +58,7 @@ class Interior extends React.Component {
 					<ItemCard
 						id={item.id}
 						key={item.id}
-						category="interior"
+						category={item.category}
 						title={item.title}
 						image={item.image}
 						price={item.price}

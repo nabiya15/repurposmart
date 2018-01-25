@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 class Homepage extends React.Component {
 	render() {
 		return (
-			<div className="jumbotron">
+			<div>
 				<h1 style={{ textAlign: 'center' }}>RepurpoSMART homepage</h1>
 				<ul>
 					<li>

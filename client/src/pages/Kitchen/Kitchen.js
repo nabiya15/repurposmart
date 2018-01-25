@@ -1,14 +1,30 @@
 import React from 'react';
-//import Navbar from '../../components/Navbar';
 import ItemCard from '../../components/ItemCard';
-import items from '../../kitchenItems.json';
+import items from '../../items.json';
 import './Kitchen.css';
 import { Link } from 'react-router-dom';
 
 class Kitchen extends React.Component {
-	// Setting this.state.items to the kitchenItems json array
-	state = {
-		items
+	// Setting inital state 
+	constructor() {
+		// console.log(items)
+	    // super() allows us to use 'this'
+	    super()
+	    // getInitialState:
+	    this.state = {
+	      items: items
+	    }
+	    // Adding our isKitchenItem() method to 'this' 
+	    this.isKitchenItem = this.isKitchenItem.bind(this);
+  	};
+
+  	isKitchenItem(item) {
+		return item.category === 'kitchen' || item.category === 'bathroom';
+	};
+
+	componentDidMount() {
+		const kitchenItems = items.filter(this.isKitchenItem)
+		this.setState( {items: kitchenItems} );
 	};
 
 	render() {
@@ -37,7 +53,7 @@ class Kitchen extends React.Component {
 					<ItemCard
 						id={item.id}
 						key={item.id}
-						category="kitchen"
+						category={item.category}
 						title={item.title}
 						image={item.image}
 						price={item.price}
