@@ -37,9 +37,7 @@ class Interior extends React.Component {
 					</h1>
 					<ul>
 						<li>
-							<Link to="/">
-								 Homepage
-							</Link>
+							<Link to="/">Homepage</Link>
 						</li>
 						<li>
 							<Link to="/kitchen">Kitchen and Bathroom</Link>

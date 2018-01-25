@@ -5,8 +5,11 @@ const {Schema} = mongoose;
 	//curly braces here indicate that mongoose here has a property called Schema. Assign that property to a variable called Schema.
 
 const User = new Schema({
-	userId : String, // id from google || fb or other authentication 
-	name : String
+	userId:String, 
+	firstName:String,
+	lastName:String,
+	email:String,
+	image:String
 });
 
 // Creating a model class and tell mongoose to create this collection

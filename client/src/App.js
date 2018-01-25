@@ -9,15 +9,14 @@ import ItemCard from './components/ItemCard';
 import Navbar from "./components/Navbar/Navbar";
 //import connect function from react-redux library. Connect funtion gives certain components the ability to call action creators
 import { connect } from "react-redux";
-
+import Profile from "./pages/Profile";
 //import all our action creators from action file
 import * as actions from "./actions";
 
 class App extends Component {
-  // as soon as the component mounts, go ahead and find out if the user is logged in or not
   componentDidMount(){
     this.props.getUser();
-
+    console.log(this.props)
   }
 
   render() {
@@ -29,13 +28,12 @@ class App extends Component {
           <Route exact path="/" component={Homepage}/>
           <Route exact path="/kitchen" component={Kitchen}/>
           <Route exact path="/interior" component={Interior}/>
+          <Route exact path="/profile" component={Profile}/>
           <Route exact path="/exterior" component={Exterior}/>  
-
           
           <Route exact path="/interior/:itemId" component={ItemPage}/>
           <Route exact path="/exterior/:itemId" component={ItemPage}/>
           <Route exact path="/kitchen/:itemId" component={ItemPage}/>
-
         </div>
       </Router>
     );
