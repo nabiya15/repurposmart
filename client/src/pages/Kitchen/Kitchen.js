@@ -37,6 +37,7 @@ class Kitchen extends React.Component {
 					<ItemCard
 						id={item.id}
 						key={item.id}
+						category="kitchen"
 						title={item.title}
 						image={item.image}
 						price={item.price}
