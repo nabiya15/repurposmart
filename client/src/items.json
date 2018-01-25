@@ -1,0 +1,59 @@
+[
+  {
+    "id": 1,
+    "title": "Sink",
+    "image": "https://www.homedepot.com/hdus/en_US/DTCCOMNEW/fetch/Category_Pages/Kitchen/Sinks/bar-prep-sink-400x400-2.png",
+    "price": "$120",
+    "seller": "username",
+    "category": "kitchen",
+    "description": ""
+  },
+  {
+    "id": 2,
+    "title": "Cabinet",
+    "image": "https://i.pinimg.com/736x/1d/96/55/1d96552e9c2a306f2402a8a99dac5cbb--kitchen-reno-cabinet-colors-kitchen.jpg",
+    "price": "$300",
+    "seller": "username",
+    "category": "bathroom",
+    "description": ""
+  },
+
+    {
+    "id": 3,
+    "title": "Bathroom door",
+    "image": "https://cmeimg-a.akamaihd.net/640/ppds/f1695d90-9ba5-4257-9100-a4f86c718a52.jpg",
+    "price": "$280",
+    "seller": "username",
+    "category": "interior",
+    "description": ""
+  },
+
+  {
+    "id": 4,
+    "title": "Wooden window blinds",
+    "image": "https://lda.lowes.com/is/image/Lowes/content-panel-desktop?src=Lowes/DP17-49844_081817_BlindsWindowShades_dt_cp_04-BlindbyMaterial",
+    "price": "$180",
+    "seller": "username",
+    "category": "interior",
+    "description": ""
+  },
+
+  {
+    "id": 5,
+    "title": "Firepit",
+    "image": "https://secure.img1-ag.wfcdn.com/im/08371255/resize-h800%5Ecompr-r85/3133/31336293/Random+Stone+Concrete+Wood+Burning+Fire+Pit.jpg",
+    "price": "$127",
+    "seller": "username",
+    "category": "exterior",
+    "description": ""
+  },
+  {
+    "id": 6,
+    "title": "Mixed grade A polished pebbles",
+    "image": "https://images.homedepot-static.com/productImages/05a5ee72-63e7-4174-9078-d63707c1e657/svn/rain-forest-bagged-rfgmbp3-30-64_1000.jpg",
+    "price": "$30",
+    "seller": "username",
+    "category": "exterior",
+    "description": ""
+  }
+]

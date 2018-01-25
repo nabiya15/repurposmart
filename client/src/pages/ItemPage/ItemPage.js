@@ -10,8 +10,12 @@ class ItemPage extends React.Component {
 
 	componentDidMount() {
 		// get thing by ID
+		console.log(this);
 		console.log(this.props.match.params.itemId);
-		
+
+
+
+		// Make API call-- set state to item data
 		// API.getItemByID(this.props.match.params.itemId)
 		// 	.then((data) => {
 		// 		this.setState({
@@ -23,9 +27,7 @@ class ItemPage extends React.Component {
 	render() {
 		return(
 			<div>
-				<div>
-				 <Navbar />
-				</div>
+			
 				<div>
 				{/* Title */}
 				<p>{this.state.item.name}</p>
