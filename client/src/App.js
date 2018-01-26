@@ -7,6 +7,7 @@ import Exterior from './pages/Exterior';
 import ItemPage from './pages/ItemPage';
 import ItemCard from './components/ItemCard';
 import Navbar from "./components/Navbar/Navbar";
+import PostItemForm from './components/PostItemForm';
 //import connect function from react-redux library. Connect funtion gives certain components the ability to call action creators
 import { connect } from "react-redux";
 import Profile from "./pages/Profile";
@@ -26,6 +27,7 @@ class App extends Component {
           <Navbar/>
            
           <Route exact path="/" component={Homepage}/>
+          <Route exact path="/postItem" component={PostItemForm}/>
           <Route exact path="/kitchen" component={Kitchen}/>
           <Route exact path="/interior" component={Interior}/>
           <Route exact path="/profile" component={Profile}/>

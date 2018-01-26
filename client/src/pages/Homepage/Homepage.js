@@ -17,6 +17,9 @@ class Homepage extends React.Component {
 					<li>
 						<Link to="/exterior">Exterior Building Supplies</Link>
 					</li>
+					<li>
+						<Link to="/postItem">Sell an Item</Link>
+					</li>
 				</ul>
 			</div>
 		);
