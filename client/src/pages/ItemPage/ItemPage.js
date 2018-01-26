@@ -13,9 +13,10 @@ class ItemPage extends React.Component {
 		console.log(this);
 		console.log(this.props.match.params.itemId);
 
-
+		
 
 		// Make API call-- set state to item data
+		
 		// API.getItemByID(this.props.match.params.itemId)
 		// 	.then((data) => {
 		// 		this.setState({
