@@ -1,20 +1,36 @@
 import React from 'react';
-//import Navbar from '../../components/Navbar';
 import ItemCard from '../../components/ItemCard';
-import items from '../../exteriorItems.json';
+import items from '../../items.json';
 import { Link } from 'react-router-dom';
 import './Exterior.css';
 
 class Exterior extends React.Component {
-	// Setting this.state.items to the exteriorItems json array
-	state = {
-		items
+	// Setting inital state 
+	constructor() {
+		// console.log(items)
+	    // super() allows us to use 'this'
+	    super()
+	    // getInitialState:
+	    this.state = {
+	      items: items
+	    }
+	    // Adding our isExteriorItem() method to 'this' 
+	    this.isExteriorItem = this.isExteriorItem.bind(this);
+  	};
+
+  	isExteriorItem(item) {
+		return item.category === 'exterior';
+	};
+
+	componentDidMount() {
+		const exteriorItems = items.filter(this.isExteriorItem)
+		this.setState( {items: exteriorItems} );
 	};
 
 	render() {
 		return (
 			<div>
-				<div className="jumbotron">
+				<div>
 					<h1 style={{ textAlign: 'center' }}>
 						Exterior Building Supplies
 					</h1>
@@ -38,7 +54,7 @@ class Exterior extends React.Component {
 					<ItemCard
 						id={item.id}
 						key={item.id}
-						category="exterior"
+						category={item.category}
 						title={item.title}
 						image={item.image}
 						price={item.price}

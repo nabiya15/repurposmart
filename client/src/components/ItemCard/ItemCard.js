@@ -57,7 +57,6 @@ class ItemCard extends React.Component {
           <ul>
             <li>
               <strong>{this.props.title}</strong>
-              <p>{console.log(this)}</p>
             </li>
             <li>
               <strong>Price:</strong> {this.props.price}
