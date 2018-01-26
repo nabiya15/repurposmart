@@ -2,8 +2,7 @@ import React, { Component } from 'react';
 import './Navbar.css';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
-import {Dropdown, NavItem } from "react-materialize";
-
+import { Dropdown, NavItem } from 'react-materialize';
 
 class Navbar extends Component {
 	renderContent() {
@@ -22,9 +21,12 @@ class Navbar extends Component {
 				);
 			default:
 				return (
-
-					<Dropdown trigger={<i className="material-icons">line_weight</i>}>
-						<NavItem href="/Profile">Profile</NavItem>
+					<Dropdown
+						trigger={<i className="material-icons">line_weight</i>}
+					>
+						<NavItem href="/">Homepage</NavItem>
+						<NavItem divider />
+						<NavItem href="/profile">Profile</NavItem>
 						<NavItem divider />
 						<NavItem href="/api/logout">Logout</NavItem>
 					</Dropdown>
@@ -36,7 +38,7 @@ class Navbar extends Component {
 			<nav>
 				<div className="nav-wrapper">
 					<Link
-						to={this.props.auth ? '/Profile' : '/'}
+						to={this.props.auth ? '/profile' : '/'}
 						className="left brand-logo"
 					>
 						Repurposmart

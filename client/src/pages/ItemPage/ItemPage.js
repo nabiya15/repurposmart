@@ -24,9 +24,6 @@ class ItemPage extends React.Component {
 		return(
 			<div>
 				<div>
-				 <Navbar />
-				</div>
-				<div>
 				{/* Title */}
 				<p>{this.state.item.name}</p>
 				
