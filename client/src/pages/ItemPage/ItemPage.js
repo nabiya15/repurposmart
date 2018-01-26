@@ -27,7 +27,6 @@ class ItemPage extends React.Component {
 	render() {
 		return(
 			<div>
-			
 				<div>
 				{/* Title */}
 				<p>{this.state.item.name}</p>
