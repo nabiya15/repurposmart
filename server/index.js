@@ -30,7 +30,7 @@ app.use(express.static("../client/public"));
 require('./routes/authRoutes')(app);
 
 // configuring express for production environment
-if(process.env.NODE_ENV === "production"){
+/*if(process.env.NODE_ENV === "production"){
 	// express will server up production assets like main.js or main.css
 	app.use(express.static("client/bulid"));
 	//Express will serve up index.html if route is not recognized
@@ -38,7 +38,7 @@ if(process.env.NODE_ENV === "production"){
 	app.get("*", (req, res)=>{
 		res.sendFile(path.resolve(__dirname,"client","build","index.html"));
 	})	
-}
+}*/
 
 // connecting to the mongoDB
 const db = mongoose.connect(keys.mongoKeys.mongoURI);
