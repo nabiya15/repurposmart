@@ -29,6 +29,17 @@ app.use(express.static("../client/public"));
 // the second set of parentheses (app)immediately invokes the first function that we have required here (require('./routes/authRoutes'))
 require('./routes/authRoutes')(app);
 
+// configuring express for production environment
+if(process.env.NODE_ENV === "production"){
+	// express will server up production assets like main.js or main.css
+	app.use(express.static("client/bulid"));
+	//Express will serve up index.html if route is not recognized
+	const path = require("path");
+	app.get("*", (req, res)=>{
+		res.sendFile(path.resolve(__dirname,"client","build","index,html"));
+	})	
+}
+
 // connecting to the mongoDB
 const db = mongoose.connect(keys.mongoKeys.mongoURI);
 

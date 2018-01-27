@@ -9,12 +9,12 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: rgb(191,54,12);
+    background-color: darkgrey;
     border-radius: 15px;
-    opacity: 0.7;
+    opacity: 0.85;
 
 }
 
 .infoDiv > h2 {
-	color: white;
+	color: firebrick;
 }

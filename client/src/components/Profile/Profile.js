@@ -6,9 +6,9 @@ class Profile extends Component {
 	renderContent(){
 		switch(this.props.auth){
 			case null:
-				return "blah";
+				return "Trying to connect";
 			case false:
-				return "false blah";
+				return "not logged in";
 			default:
 				const firstName = this.props.auth.firstName.charAt(0).toUpperCase()+this.props.auth.firstName.slice(1);
 				const lastName =  this.props.auth.lastName.charAt(0).toUpperCase()+this.props.auth.lastName.slice(1);

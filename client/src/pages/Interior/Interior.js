@@ -30,7 +30,7 @@ class Interior extends React.Component {
 	render() {
 		// {console.log(this.state)}
 		return (
-			<div>
+			<div className= "container">
 				<div>
 					<h1 style={{ textAlign: 'center' }}>
 						Interior Building Supplies
