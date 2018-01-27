@@ -29,7 +29,7 @@ class Exterior extends React.Component {
 
 	render() {
 		return (
-			<div>
+			<div className="container">
 				<div>
 					<h1 style={{ textAlign: 'center' }}>
 						Exterior Building Supplies

@@ -35,7 +35,7 @@ class Navbar extends Component {
 	render() {
 		return (
 		<div className= "navbar-fixed ">
-			<nav className="navbar-fixed blue-grey darken-3 nav" >
+			<nav className="navbar-fixed nav" >
 				<div className="nav-wrapper" >
 					<Link to="/" className="left brand-logo logo">
 						<img src="images/Logo.jpg" className="logo" alt="Repurposmart" ></img>

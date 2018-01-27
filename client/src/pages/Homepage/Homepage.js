@@ -3,6 +3,7 @@ import React from 'react';
 import { Parallax } from 'react-parallax';
 import './Homepage.css';
 import { Link } from 'react-router-dom';
+import {Footer} from '../../components/Footer/Footer';
 class Homepage extends React.Component {
 	render() {
 		return (
@@ -69,6 +70,8 @@ class Homepage extends React.Component {
 				</Link>
 					<div style={{ height: '500px' }} />
 				</Parallax>
+
+				<Footer/>
 
 			</div>
 		);
