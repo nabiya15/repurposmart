@@ -69,7 +69,7 @@ class Homepage extends React.Component {
 				</Link>
 					<div style={{ height: '500px' }} />
 				</Parallax>
-		
+
 			</div>
 		);
 	}
