@@ -1,0 +1,12 @@
+.logo {
+    display: flex;
+    height: 100%;
+}
+
+.logo>img {
+    vertical-align: middle
+}
+
+.nav{
+	padding: 0 25px;
+}
