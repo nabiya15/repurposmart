@@ -22,6 +22,9 @@ app.use(
 app.use(passport.initialize());
 app.use(passport.session());
 
+app.use(express.static("../client/src/assets"));
+app.use(express.static("../client/public"));
+
 //import authRoutes for authentication and pass the app object to it
 // the second set of parentheses (app)immediately invokes the first function that we have required here (require('./routes/authRoutes'))
 require('./routes/authRoutes')(app);

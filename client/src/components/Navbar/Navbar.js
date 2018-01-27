@@ -13,9 +13,7 @@ class Navbar extends Component {
 				return (
 					<li>
 						<a href="/auth/google">
-							<i className="material-icons left tiny button-collapse">
-								exit_to_app
-							</i>Login
+							<i className="material-icons left tiny button-collapse">exit_to_app</i>Login
 						</a>
 					</li>
 				);
@@ -29,26 +27,28 @@ class Navbar extends Component {
 						<NavItem href="/profile">Profile</NavItem>
 						<NavItem divider />
 						<NavItem href="/api/logout">Logout</NavItem>
+
 					</Dropdown>
 				);
 		}
 	}
 	render() {
 		return (
-			<nav>
-				<div className="nav-wrapper">
-					<Link
-						to={this.props.auth ? '/profile' : '/'}
-						className="left brand-logo"
-					>
-						Repurposmart
+		<div className= "navbar-fixed ">
+			<nav className="navbar-fixed blue-grey darken-3 nav" >
+				<div className="nav-wrapper" >
+					<Link to="/" className="left brand-logo logo">
+						<img src="images/Logo.jpg" className="logo" alt="Repurposmart" ></img>
 					</Link>
+				
 					<ul className="right">{this.renderContent()}</ul>
 				</div>
 			</nav>
+		</div>
 		);
 	}
 }
+
 function mapStateToProps({ auth }) {
 	return { auth };
 }

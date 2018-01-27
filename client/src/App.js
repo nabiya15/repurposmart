@@ -5,24 +5,22 @@ import Kitchen from './pages/Kitchen';
 import Interior from './pages/Interior';
 import Exterior from './pages/Exterior';
 import ItemPage from './pages/ItemPage';
-import ItemCard from './components/ItemCard';
 import Navbar from "./components/Navbar/Navbar";
 //import connect function from react-redux library. Connect funtion gives certain components the ability to call action creators
 import { connect } from "react-redux";
-import Profile from "./pages/Profile";
+import Profile from "./components/Profile/Profile";
 //import all our action creators from action file
 import * as actions from "./actions";
 
 class App extends Component {
   componentDidMount(){
     this.props.getUser();
-    console.log(this.props)
   }
 
   render() {
     return (
       <Router>
-        <div className="container">
+        <div>
           <Navbar/>
            
           <Route exact path="/" component={Homepage}/>
