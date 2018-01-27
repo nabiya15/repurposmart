@@ -13,7 +13,7 @@ class Navbar extends Component {
 				return (
 					<li>
 						<a href="/auth/google">
-							<i className="material-icons left tiny button-collapse">exit_to_app</i>Login
+							<i className="material-icons left tiny button-collapse">exit_to_app</i> Login With Google
 						</a>
 					</li>
 				);

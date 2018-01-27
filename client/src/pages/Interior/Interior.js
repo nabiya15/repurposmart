@@ -3,6 +3,8 @@ import ItemCard from '../../components/ItemCard';
 import items from '../../items.json';
 import './Interior.css';
 import { Link } from 'react-router-dom';
+import {Col, Card} from "react-materialize";
+//import API from '../../utils/API.js';
 
 class Interior extends React.Component {
 	// Setting inital state 
@@ -25,6 +27,14 @@ class Interior extends React.Component {
 	componentDidMount() {
 		const interiorItems = items.filter(this.isInteriorItem)
 		this.setState( {items: interiorItems} );
+			/*const category = "interior";
+			API.getItems(category)
+			.then(res =>
+				this.setState({
+					items: res.data,
+				})
+			)
+			.catch(err => console.log(err));*/
 	};
 
 	render() {
@@ -32,23 +42,21 @@ class Interior extends React.Component {
 		return (
 			<div className= "container">
 				<div>
-					<h1 style={{ textAlign: 'center' }}>
-						Interior Building Supplies
-					</h1>
-					<ul>
-						<li>
-							<Link to="/">Homepage</Link>
-						</li>
-						<li>
-							<Link to="/kitchen">Kitchen and Bathroom</Link>
-						</li>
-
-						<li>
-							<Link to="/exterior">
-								Exterior Building Supplies
-							</Link>
-						</li>
-					</ul>
+				<Col m={6} s={12}>
+					<Card
+						className="blue-grey darken-1 titleCard"
+						textClassName="white-text"
+					>
+						<h2>
+							Interior Building Supplies
+						</h2>
+						<h5>
+						<Link to="/"> Homepage </Link>||
+						<Link to="/kitchen"> Kitchen and Bathroom </Link>||
+						<Link to="/exterior"> Exterior Building Supplies </Link>
+						</h5>
+					</Card>
+				</Col>
 				</div>
 
 				{/* Map over this.state.items and render an ItemCard component for each item object */}
